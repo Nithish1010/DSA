@@ -1,40 +1,40 @@
 import java.util.Scanner;
-public class LinearSearch
+public class LS
 {
     public static void main(String args[])
     {
-        int A[]=new int[15];
-        int n;
         Scanner sc=new Scanner(System.in);
+        int A[]=new int [10];
         System.out.println("Enter how many elements to store: ");
-        n=sc.nextInt();
-        System.out.println("Enter Array elements: ");
+        int n=sc.nextInt();
+        System.out.println("Enter the elements: ");
         for(int i=0;i<n;i++)
         {
             A[i]=sc.nextInt();
         }
-        System.out.println("Enter th element to search: ");
+        System.out.println("Enter the element to search: ");
         int target=sc.nextInt();
         int result=ls(A,target);
-        if(result!=0)
+        if(result!=-1)
         {
-            System.out.println("Element "+target+" found at index "+result);
+             System.out.println("Element "+target+" found at index "+result);
         }
         else
         {
-            System.out.println("Element "+target+" not found");
+            System.out.println("Element "+target+" not found.");
+            System.out.println(result);
         }
     }
     public static int ls(int A[],int target)
     {
-        int i=0;
+        int i;
         for(i=0;i<A.length;i++)
-        {
-            if (A[i]==target)
+        { 
+            if(A[i]==target)
             {
-                return i;
+            return i;
             }
         }
-        return -i;
+    return -1;
     }
 }
