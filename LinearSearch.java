@@ -22,7 +22,7 @@ public class LinearSearch
         }
         else
         {
-            System.out.println("Element not found"+result);
+            System.out.println("Element "+target+" not found");
         }
     }
     public static int ls(int A[],int target)
